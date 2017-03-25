@@ -1,6 +1,11 @@
 <md-sidenav-container>
   <md-sidenav #sidenav>
     <md-list *ngIf="oases">
+      <h3 md-subheader (click)="sidenav.close()">
+        閉じる
+        <md-icon md-list-avatar>chevron_left</md-icon>
+      </h3>
+      <md-divider></md-divider>
       <md-list-item *ngFor="let oasis of oases">
         <md-icon md-list-avatar>place</md-icon>
         <h4 md-line>{{oasis.title}}</h4>
@@ -25,7 +30,7 @@
 
   <footer>
     <md-toolbar>
-      - Copyright © 2017 もばっぷ All Rights Reserved. -
+      <p class="footer">- Copyright © 2017 もばっぷ All Rights Reserved. -</p>
     </md-toolbar>
   </footer>
 </md-sidenav-container>
