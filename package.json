@@ -4,10 +4,11 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --host 0.0.0.0",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
+    "sasslint": "sass-lint -c .sass-lint.yml -q -v",
     "e2e": "ng e2e"
   },
   "private": true,
@@ -22,6 +23,7 @@
     "@angular/router": "^4.0.0",
     "angular2-google-maps": "^0.17.0",
     "core-js": "^2.4.1",
+    "html-webpack-plugin": "^2.28.0",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4"
   },
@@ -36,10 +38,11 @@
     "karma": "~1.4.1",
     "karma-chrome-launcher": "~2.0.0",
     "karma-cli": "~1.0.1",
+    "karma-coverage-istanbul-reporter": "^0.2.0",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
-    "karma-coverage-istanbul-reporter": "^0.2.0",
     "protractor": "~5.1.0",
+    "sass-lint": "^1.10.2",
     "ts-node": "~2.0.0",
     "tslint": "~4.5.0",
     "typescript": "~2.2.0"
