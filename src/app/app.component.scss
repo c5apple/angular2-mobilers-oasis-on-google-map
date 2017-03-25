@@ -1,3 +1,22 @@
 .sebm-google-map-container {
-  height: 600px;
+  height: 80%;
+}
+.example-icon {
+  padding: 0 14px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+md-sidenav-container {
+  height: 100%;
+}
+
+md-sidenav {
+  padding: 20px;
+}
+
+footer md-toolbar {
+  align-items: flex-end;
 }

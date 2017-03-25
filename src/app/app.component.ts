@@ -11,7 +11,6 @@ import { SearchResponseSpot } from './service/mobilers-oasis/interface/search-re
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'My first angular2-google-maps project';
   lat = 34.7024639; // 大阪駅緯度
   lng = 135.494839; // 大阪駅経度
   zoom = 15;
