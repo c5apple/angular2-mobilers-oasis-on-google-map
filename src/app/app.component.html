@@ -2,6 +2,10 @@
   {{title}}
 </h1>
 
-<sebm-google-map [latitude]="lat" [longitude]="lng">
-  <sebm-google-map-marker [latitude]="lat" [longitude]="lng"></sebm-google-map-marker>
-</sebm-google-map>
+<ng-container *ngIf="oases">
+  <sebm-google-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+    <sebm-google-map-marker [latitude]="lat" [longitude]="lng"></sebm-google-map-marker>
+    <sebm-google-map-marker *ngFor="let oasis of oases" [latitude]="oasis.latitude" [longitude]="oasis.longitude" [label]="oasis.index.toString()"></sebm-google-map-marker>
+    <sebm-map-polygon [paths]="paths" [fillOpacity]="0.1" [strokeColor]="'#ff3860'"></sebm-map-polygon>
+  </sebm-google-map>
+</ng-container>

@@ -7,6 +7,9 @@ import { AgmCoreModule } from 'angular2-google-maps/core';
 
 import { AppComponent } from './app.component';
 
+import { MobilersOasisService } from './service/mobilers-oasis/mobilers-oasis.service';
+import { MockMobilersOasisService } from './service/mobilers-oasis/mobilers-oasis.service.mock';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -19,7 +22,10 @@ import { AppComponent } from './app.component';
       apiKey: 'MY-KEY'
     })
   ],
-  providers: [],
+  providers: [
+    // MobilersOasisService
+    { provide: MobilersOasisService, useClass: MockMobilersOasisService }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
