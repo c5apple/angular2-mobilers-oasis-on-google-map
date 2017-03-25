@@ -1,48 +1,8 @@
-.sebm-google-map-container {
-  height: 80%;
-}
-.example-icon {
-  padding: 0 14px;
-}
-
-.example-spacer {
-  flex: 1 1 auto;
-}
-h1 {
-  font-size: 28px;
-}
-@media screen and (max-width: 480px) {
-  md-toolbar small {
-    display: none;
-  }
-}
-h3 md-icon {
-  float: right;
-}
-.mat-list .mat-list-item .mat-list-avatar, .mat-nav-list .mat-list-item .mat-list-avatar {
-  height: 24px;
-  opacity: 0.62;
-}
-.mat-toolbar {
-  font-size: 1rem;
-}
-.footer {
-  font-size: 0.875rem;
-  white-space: pre-line;
-}
 md-sidenav-container {
   width: 100%;
   height: 100%;
 }
 md-sidenav {
   max-width: calc(100% - 40px);
-  padding: 20px;
-}
-@media screen and (max-width: 480px) {
-  md-sidenav {
-    padding: 5px;
-  }
-}
-footer md-toolbar {
-  align-items: flex-end;
+  padding: 5px;
 }

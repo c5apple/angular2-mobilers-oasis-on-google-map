@@ -1,36 +1,11 @@
 <md-sidenav-container>
   <md-sidenav #sidenav>
-    <md-list *ngIf="oases">
-      <h3 md-subheader (click)="sidenav.close()">
-        閉じる
-        <md-icon md-list-avatar>chevron_left</md-icon>
-      </h3>
-      <md-divider></md-divider>
-      <md-list-item *ngFor="let oasis of oases">
-        <md-icon md-list-avatar>place</md-icon>
-        <h4 md-line>{{oasis.title}}</h4>
-        <!--TODO <p md-line>距離</p>-->
-      </md-list-item>
-    </md-list>
+    <app-side-nav [oases]="oases" (onCloseMenu)="sidenav.close()"></app-side-nav>
   </md-sidenav>
 
-  <md-toolbar color="primary">
-    <h1>もばっぷ</h1>&nbsp;<small>(Mobiler's Oases on Google Maps)</small>
-    <span class="example-spacer"></span>
-    <md-icon class="example-icon" (click)="sidenav.open()">menu</md-icon>
-  </md-toolbar>
+  <app-header (onOpenMenu)="sidenav.open()"></app-header>
 
-  <ng-container *ngIf="oases">
-    <sebm-google-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
-      <sebm-google-map-marker [latitude]="lat" [longitude]="lng"></sebm-google-map-marker>
-      <sebm-google-map-marker *ngFor="let oasis of oases" [latitude]="oasis.latitude" [longitude]="oasis.longitude" [label]="oasis.index.toString()"></sebm-google-map-marker>
-      <sebm-map-polygon [paths]="paths" [fillOpacity]="0.1" [strokeColor]="'#ff3860'"></sebm-map-polygon>
-    </sebm-google-map>
-  </ng-container>
+  <app-google-map *ngIf="oases" [lat]="lat" [lng]="lng" [zoom]="zoom" [paths]="paths" [oases]="oases"></app-google-map>
 
-  <footer>
-    <md-toolbar>
-      <p class="footer">- Copyright © 2017 もばっぷ All Rights Reserved. -</p>
-    </md-toolbar>
-  </footer>
+  <app-footer></app-footer>
 </md-sidenav-container>

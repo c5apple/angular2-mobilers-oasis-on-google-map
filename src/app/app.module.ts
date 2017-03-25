@@ -3,17 +3,23 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
-
 import { AgmCoreModule } from 'angular2-google-maps/core';
 
 import { AppComponent } from './app.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
+import { SideNavComponent } from './side-nav/side-nav.component';
+import { GoogleMapComponent } from './google-map/google-map.component';
 
-import { MobilersOasisService } from './service/mobilers-oasis/mobilers-oasis.service';
-import { MockMobilersOasisService } from './service/mobilers-oasis/mobilers-oasis.service.mock';
+import { MobilersOasisService, MockMobilersOasisService } from './service/mobilers-oasis';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FooterComponent,
+    HeaderComponent,
+    SideNavComponent,
+    GoogleMapComponent
   ],
   imports: [
     BrowserModule,

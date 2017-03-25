@@ -1,0 +1,26 @@
+h1 {
+  font-size: 28px;
+}
+@media screen and (max-width: 480px) {
+  md-toolbar small {
+    display: none;
+  }
+}
+md-icon {
+  padding: 0 14px;
+  cursor: pointer;
+
+  .menu {
+    float: left;
+  }
+  .search {
+    float: right;
+  }
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+.mat-toolbar {
+  font-size: 1rem;
+  align-items: center;
+}

@@ -1,0 +1,11 @@
+h3 {
+  cursor: pointer;
+
+  md-icon {
+    float: right;
+  }
+}
+.mat-list .mat-list-item .mat-list-avatar, .mat-nav-list .mat-list-item .mat-list-avatar {
+  height: 24px;
+  opacity: 0.62;
+}
