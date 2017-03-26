@@ -4,6 +4,8 @@
 export class SearchResponseSpot {
   /** インデックス */
   index: number;
+  /** window表示 */
+  isOpened: boolean;
 
   /** モバイラーズオアシス内でユニークなIDです。 */
   entry_id: number;

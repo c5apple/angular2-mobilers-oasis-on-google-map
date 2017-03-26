@@ -21,4 +21,12 @@ export class GoogleMapComponent implements OnInit {
   ngOnInit() {
   }
 
+  public openMapInfoWindow(index: number): void {
+    this.closeMapInfoWindowAll();
+    this.oases[index - 1].isOpened = true;
+  }
+  public closeMapInfoWindowAll(): void {
+    this.oases.forEach(oasis => oasis.isOpened = false);
+  }
+
 }

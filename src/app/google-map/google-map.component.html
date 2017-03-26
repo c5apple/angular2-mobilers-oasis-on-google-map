@@ -1,5 +1,17 @@
 <sebm-google-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
   <sebm-google-map-marker [latitude]="lat" [longitude]="lng"></sebm-google-map-marker>
-  <sebm-google-map-marker *ngFor="let oasis of oases" [latitude]="oasis.latitude" [longitude]="oasis.longitude" [label]="oasis.index.toString()"></sebm-google-map-marker>
+  <sebm-google-map-marker *ngFor="let oasis of oases" [latitude]="oasis.latitude" [longitude]="oasis.longitude" [label]="oasis.index.toString()"
+    (markerClick)="openMapInfoWindow(oasis.index)">
+    <sebm-google-map-info-window [isOpen]="oasis.isOpened">
+      <p><strong>{{oasis.title}}</strong></p>
+      <p>
+        <md-chip-list class="mat-chip-list-stacked">
+          <md-chip *ngFor="let category of oasis.category" color="Primary">
+            <small>{{category}}</small>
+          </md-chip>&nbsp;
+        </md-chip-list>
+      </p>
+    </sebm-google-map-info-window>
+  </sebm-google-map-marker>
   <sebm-map-polygon [paths]="paths" [fillOpacity]="0.1" [strokeColor]="'#ff3860'"></sebm-map-polygon>
 </sebm-google-map>
