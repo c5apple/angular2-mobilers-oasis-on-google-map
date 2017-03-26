@@ -1,8 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { LatLngLiteral } from 'angular2-google-maps/core';
 
-import { DialogService } from '../service/dialog/dialog.service';
-import { SearchResponse, SearchResponseSpot } from '../service/mobilers-oasis';
+import { DialogService } from '../../service/dialog/dialog.service';
+import { SearchResponse, SearchResponseSpot } from '../../service/mobilers-oasis';
 
 @Component({
   selector: 'app-google-map',

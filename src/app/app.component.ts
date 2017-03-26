@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LatLngLiteral } from 'angular2-google-maps/core';
 
-import { MobilersOasisService } from './service/mobilers-oasis/mobilers-oasis.service';
-import { SearchResponse } from './service/mobilers-oasis/interface/search-response';
-import { SearchResponseSpot } from './service/mobilers-oasis/interface/search-response-spot';
+import { MobilersOasisService, SearchResponse, SearchResponseSpot } from './shared/service/mobilers-oasis';
 
 @Component({
   selector: 'app-root',

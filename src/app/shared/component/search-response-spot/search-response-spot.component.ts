@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MdDialogRef } from '@angular/material';
 
-import { SearchResponseSpot } from '../service/mobilers-oasis';
+import { SearchResponseSpot } from '../../service/mobilers-oasis';
 
 @Component({
   selector: 'app-search-response-spot',

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { MdDialog, MdDialogRef } from '@angular/material';
 
 import { SearchResponseSpot } from '../mobilers-oasis';
-import { SearchResponseSpotComponent } from '../../search-response-spot/search-response-spot.component';
+import { SearchResponseSpotComponent } from '../../component/search-response-spot/search-response-spot.component';
 
 @Injectable()
 export class DialogService {

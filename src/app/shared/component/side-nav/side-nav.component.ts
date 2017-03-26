@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
-import { DialogService } from '../service/dialog/dialog.service';
-import { SearchResponseSpot } from '../service/mobilers-oasis';
+import { DialogService } from '../../service/dialog/dialog.service';
+import { SearchResponseSpot } from '../../service/mobilers-oasis';
 
 @Component({
   selector: 'app-side-nav',
