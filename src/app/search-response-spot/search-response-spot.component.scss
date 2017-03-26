@@ -1,3 +1,7 @@
+md-chip {
+  margin-right: 5px;
+  max-width: 200px;
+}
 h3 {
   cursor: pointer;
 
@@ -9,6 +13,6 @@ h3 {
   height: 24px;
   opacity: 0.62;
 }
-md-list-item {
-  cursor: pointer;
+md-icon[hidden], md-list-item[hidden], md-divider[hidden] {
+  display: none;
 }

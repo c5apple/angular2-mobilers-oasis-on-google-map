@@ -10,8 +10,10 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { GoogleMapComponent } from './google-map/google-map.component';
+import { SearchResponseSpotComponent } from './search-response-spot/search-response-spot.component';
 
 import { MobilersOasisService, MockMobilersOasisService } from './service/mobilers-oasis';
+import { DialogService } from './service/dialog/dialog.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { MobilersOasisService, MockMobilersOasisService } from './service/mobile
     FooterComponent,
     HeaderComponent,
     SideNavComponent,
-    GoogleMapComponent
+    GoogleMapComponent,
+    SearchResponseSpotComponent
   ],
   imports: [
     BrowserModule,
@@ -31,8 +34,12 @@ import { MobilersOasisService, MockMobilersOasisService } from './service/mobile
     })
   ],
   providers: [
+    DialogService,
     // MobilersOasisService
     { provide: MobilersOasisService, useClass: MockMobilersOasisService }
+  ],
+  entryComponents: [
+    SearchResponseSpotComponent
   ],
   bootstrap: [AppComponent]
 })

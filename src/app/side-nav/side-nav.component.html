@@ -4,7 +4,7 @@
     <md-icon md-list-avatar>chevron_left</md-icon>
   </h3>
   <md-divider></md-divider>
-  <md-list-item *ngFor="let oasis of oases">
+  <md-list-item *ngFor="let oasis of oases" (click)="openDialog(oasis)">
     <md-icon md-list-avatar>place</md-icon>
     <h4 md-line>{{oasis.title}}</h4>
     <!--TODO <p md-line>距離</p>-->

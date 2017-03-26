@@ -11,6 +11,9 @@
           </md-chip>&nbsp;
         </md-chip-list>
       </p>
+      <p align="right">
+        <button md-raised-button [color]="'accent'" (click)="openDialog(oasis)">詳細</button>
+      </p>
     </sebm-google-map-info-window>
   </sebm-google-map-marker>
   <sebm-map-polygon [paths]="paths" [fillOpacity]="0.1" [strokeColor]="'#ff3860'"></sebm-map-polygon>

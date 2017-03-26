@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
+import { DialogService } from '../service/dialog/dialog.service';
 import { SearchResponseSpot } from '../service/mobilers-oasis';
 
 @Component({
@@ -11,7 +12,7 @@ export class SideNavComponent implements OnInit {
 
   @Input() oases: SearchResponseSpot[];
 
-  constructor() { }
+  constructor(private dialog: DialogService) { }
 
   ngOnInit() {
   }
@@ -20,7 +21,14 @@ export class SideNavComponent implements OnInit {
   /**
    * メニューアイコンを閉じる
    */
-  public closeMenu() {
+  public closeMenu(): void {
     this.onCloseMenu.emit();
+  }
+
+  /**
+   * スポット情報ダイアログを開く
+   */
+  public openDialog(oasis: SearchResponseSpot): void {
+    this.dialog.openDialog(oasis);
   }
 }

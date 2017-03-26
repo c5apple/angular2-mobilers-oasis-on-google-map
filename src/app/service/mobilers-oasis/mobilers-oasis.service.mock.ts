@@ -31,7 +31,8 @@ export class MockMobilersOasisService extends MobilersOasisService {
         ],
         'mo_url': '//oasis.mogya.com/spot/entry_2606',
         'icon': '//oasis.mogya.com/images/design/spot_icon_01_none_[size]px.png',
-        'icon_powerframe': '//oasis.mogya.com/images/design/spot_icon_01_ok_[size]px.png'
+        'icon_powerframe': '//oasis.mogya.com/images/design/spot_icon_01_ok_[size]px.png',
+        'distance': 0
       },
       {
         'entry_id': 34005,
@@ -54,7 +55,8 @@ export class MockMobilersOasisService extends MobilersOasisService {
         ],
         'mo_url': '//oasis.mogya.com/spot/entry_8211',
         'icon': '//oasis.mogya.com/images/design/spot_icon_03_none_[size]px.png',
-        'icon_powerframe': '//oasis.mogya.com/images/design/spot_icon_03_ok_[size]px.png'
+        'icon_powerframe': '//oasis.mogya.com/images/design/spot_icon_03_ok_[size]px.png',
+        'distance': 1
       },
       {
         'entry_id': 37525,

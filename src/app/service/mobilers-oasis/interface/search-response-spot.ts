@@ -34,7 +34,7 @@ export class SearchResponseSpot {
   /** モバイラーズオアシスでの情報ページURL */
   mo_url: string;
   /** (lat,lngを渡した場合のみ)指定した緯度経度からのおおよその距離。km単位です。 */
-  distance: string;
+  distance: number;
 
   constructor(s: any) {
     if (s.entry_id) { this.entry_id = s.entry_id; }

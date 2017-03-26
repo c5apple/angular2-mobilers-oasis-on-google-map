@@ -1,0 +1,36 @@
+<p>
+  <strong>{{oasis.title}}</strong>&nbsp;
+  <small *ngIf="oasis.url_pc">(<a href="{{oasis.url_pc}}">公式サイト</a>)</small>
+</p>
+<p><small>{{oasis.address}}</small></p>
+<P *ngIf="oasis.distance"><small>約{{oasis.distance | number:0}}km先</small></P>
+<md-chip-list class="mat-chip-list-stacked">
+  <md-chip *ngFor="let category of oasis.category" color="Primary">
+    <small>{{category}}</small>
+  </md-chip>&nbsp;
+</md-chip-list>
+<md-list *ngIf="oasis.tag">
+  <h3 md-subheader (click)="toggleOpenedTag()">電源、Qi、禁煙喫煙などの情報
+    <md-icon md-list-avatar [hidden]="isOpenedTag">keyboard_arrow_down</md-icon>
+    <md-icon md-list-avatar [hidden]="!isOpenedTag">keyboard_arrow_up</md-icon>
+  </h3>
+  <ng-container *ngFor="let tag of oasis.tag.split(',')">
+    <md-list-item [hidden]="!isOpenedTag">
+      <h4 md-line>{{tag}}</h4>
+    </md-list-item>
+  </ng-container>
+  <md-divider [hidden]="!isOpenedTag"></md-divider>
+</md-list>
+<md-list *ngIf="oasis.wireless">
+  <h3 md-subheader (click)="toggleOpenedWireless()">無線LAN
+    <md-icon md-list-avatar [hidden]="isOpenedWireless">keyboard_arrow_down</md-icon>
+    <md-icon md-list-avatar [hidden]="!isOpenedWireless">keyboard_arrow_up</md-icon>
+  </h3>
+  <ng-container *ngFor="let wireless of oasis.wireless.split(',')">
+    <md-list-item [hidden]="!isOpenedWireless">
+      <md-icon md-list-avatar>wifi</md-icon>
+      <h4 md-line>{{wireless}}</h4>
+    </md-list-item>
+  </ng-container>
+  <md-divider [hidden]="!isOpenedWireless"></md-divider>
+</md-list>
