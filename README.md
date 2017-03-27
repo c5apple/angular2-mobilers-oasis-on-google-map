@@ -1,28 +1,31 @@
 # もばっぷ (Mobiler's Oases on Google Maps)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+[モバイラーズオアシス](https://oasis.mogya.com/)のデータを[Googleマップ](https://www.google.co.jp/maps)に描画します。
 
-## Development server
+## 利用ライブラリ
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- [angular-cli](./doc/HOW-TO-ANGULAR-CLI.md)
+- [モバイラーズオアシスAPI](https://oasis.mogya.com/blog/API)
+- [angular2-google-maps](https://angular-maps.com/)
 
-## Code scaffolding
+## 実行方法
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+1. Google Maps API のキーを取得する
+1. app.module.ts を修正する
+1. `ng serve` or `ng build`
 
-## Build
+### 1. Google Maps API キーの取得方法
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+[developers.google.com](https://developers.google.com/maps/documentation/javascript/) にて取得。
+Googleアカウントがないと取得できないので注意。
+利用制限や課金などあるので自己責任で。
 
-## Running unit tests
+### 2. app.module.ts の修正方法
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+    AgmCoreModule.forRoot({
+      apiKey: 'MY-KEY' // ここに Google Maps API のキーを設定
+    })
+```
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### Enjoy もばっぷ!!
