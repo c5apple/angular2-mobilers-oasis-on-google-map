@@ -1,7 +1,12 @@
 .sebm-google-map-container {
-  height: 80%;
+  height: calc(100% - 48px - 48px); /* md-tool-bar*2 */
 }
 md-chip {
   margin-right: 5px;
   max-width: 200px;
+}
+button[md-fab] {
+  position: absolute;
+  right: 20px;
+  bottom: calc(48px + 20px);
 }

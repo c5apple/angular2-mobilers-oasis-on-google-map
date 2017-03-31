@@ -5,7 +5,8 @@
 
   <app-header (onOpenMenu)="sidenav.open()"></app-header>
 
-  <app-google-map *ngIf="oases" [lat]="lat" [lng]="lng" [zoom]="zoom" [paths]="paths" [oases]="oases"></app-google-map>
+  <app-google-map *ngIf="oases" [lat]="lat" [lng]="lng" [zoom]="zoom" [paths]="paths" [oases]="oases" [isCurrentPositionGetable]="isCurrentPositionGetable"
+    (onClickGetCurrentPosition)="getCurrentPosition()"></app-google-map>
 
   <app-footer></app-footer>
 </md-sidenav-container>

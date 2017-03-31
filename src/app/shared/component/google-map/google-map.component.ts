@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { LatLngLiteral } from 'angular2-google-maps/core';
 
 import { DialogService } from '../../service/dialog/dialog.service';
@@ -16,6 +16,7 @@ export class GoogleMapComponent implements OnInit {
   @Input() zoom: number;
   @Input() paths: Array<LatLngLiteral> = [];
   @Input() oases: SearchResponseSpot[];
+  @Input() isCurrentPositionGetable: boolean;
 
   constructor(private dialog: DialogService) { }
 
@@ -35,5 +36,13 @@ export class GoogleMapComponent implements OnInit {
    */
   public openDialog(oasis: SearchResponseSpot): void {
     this.dialog.openDialog(oasis);
+  }
+
+  @Output() onClickGetCurrentPosition = new EventEmitter();
+  /**
+   * 現在地を取得する
+   */
+  public clickGetCurrentPosition(): void {
+    this.onClickGetCurrentPosition.emit();
   }
 }

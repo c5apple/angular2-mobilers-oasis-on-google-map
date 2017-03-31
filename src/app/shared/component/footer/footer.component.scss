@@ -1,5 +1,7 @@
-footer md-toolbar {
-  align-items: flex-end;
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 p {
   font-size: 0.875rem;
