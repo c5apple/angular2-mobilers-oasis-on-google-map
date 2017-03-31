@@ -6,6 +6,7 @@ import { MaterialModule } from '@angular/material';
 import { AgmCoreModule } from 'angular2-google-maps/core';
 
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 import {
   FooterComponent,
   HeaderComponent,
@@ -18,6 +19,10 @@ import {
   MobilersOasisService,
   MockMobilersOasisService
 } from './shared/service';
+import {
+  PageMapComponent,
+  PageSearchComponent
+} from './page';
 
 @NgModule({
   declarations: [
@@ -26,7 +31,9 @@ import {
     HeaderComponent,
     SideNavComponent,
     GoogleMapComponent,
-    SearchResponseSpotComponent
+    SearchResponseSpotComponent,
+    PageMapComponent,
+    PageSearchComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +42,8 @@ import {
     MaterialModule,
     AgmCoreModule.forRoot({
       apiKey: 'MY-KEY'
-    })
+    }),
+    AppRoutingModule
   ],
   providers: [
     DialogService,

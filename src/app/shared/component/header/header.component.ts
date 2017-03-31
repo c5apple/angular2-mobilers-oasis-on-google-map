@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +8,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
@@ -18,5 +19,12 @@ export class HeaderComponent implements OnInit {
    */
   public openMenu() {
     this.onOpenMenu.emit();
+  }
+
+  /**
+   * 検索
+   */
+  public goSearch() {
+    this.router.navigate(['search']);
   }
 }
