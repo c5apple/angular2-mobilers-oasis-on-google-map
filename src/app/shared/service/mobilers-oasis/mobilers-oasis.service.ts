@@ -21,7 +21,7 @@ export class MobilersOasisService {
     const url = this.ep + `?n=${n}&w=${w}&s=${s}&e=${e}`;
     return this.http.get(url)
       .toPromise()
-      .then((res: Response) => res.json() as SearchResponse)
+      .then((res: Response) => new SearchResponse(res.json()))
       .catch((err: any) => console.error(err));
   }
 

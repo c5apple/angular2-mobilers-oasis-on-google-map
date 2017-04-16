@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AgmCoreModule } from 'angular2-google-maps/core';
 import 'hammerjs';
 
@@ -41,6 +42,7 @@ import {
     FormsModule,
     HttpModule,
     MaterialModule,
+    BrowserAnimationsModule,
     AgmCoreModule.forRoot({
       apiKey: 'MY-KEY'
     }),
